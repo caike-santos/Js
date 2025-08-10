@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo Dom</h1>
+    <p>Como usar <strong>DOM</strong></p>
+    <p id="t2">Por: marca, Id, classe, nome e seletor</p>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusamus voluptatibus expedita ducimus rem, incidunt culpa cum maiores veritatis qui odio explicabo rerum optio cumque. Labore voluptatum odio fugit iure?</p>
+    <p id="outro">texto exemplo para o seletor</p>
+    <p></p>
+    <script>
+        //por marca
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        //por Id
+        var p2 = window.document.getElementById('t2')
+        p2.style.textDecoration = 'underline'
+        //por nome
+        var p3 = window.document.getElementsByClassName('texto')[0]
+        window.document.write('por classe: '+p3.innerHTML +'<br>')
+        //por seletor
+        var p4 = window.document.querySelector('#outro')
+        window.document.write('por seletor: ' +p4.innerHTML)
+    </script>
+</body>
+</html>
