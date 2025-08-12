@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multa</title>
+</head>
+<body>
+    <h1>Confira se você foi multado</h1>
+    <label for="ivel">Qual a sua velocidade:</label>
+    <input type="number" name="velocidade" id="ivel">
+    <input type="submit" value="Checar" onclick="checar()">
+    <p id="res"></p>
+
+
+    <h1>Confira se você pode votar</h1>
+    <label for="iidade">Qual a sua idade:</label>
+    <input type="number" name="idade" id="iidade">
+    <input type="submit" value="Checar" onclick="ana()">
+    <p id="ana"></p>
+    <script>
+        function checar(){
+            var vel = window.document.getElementById('ivel')
+            var p1 = window.document.getElementById('res')
+            var nun = Number(vel.value)
+            if (nun > 80){
+                p1.innerHTML = `Você foi multado, pois ${nun} é maior que a velocidade permitida de 80km/h`
+            }else{
+                p1.innerHTML = `Você não multado, pois ${nun} é menor ou igual que a velocidade permitida de 80km/h`
+            }
+        }
+
+        function ana(){
+            var id = window.document.getElementById('iidade')
+            var p2 = window.document.getElementById('ana')
+            var ida = Number(id.value)
+
+            if(ida < 16){
+                p2.innerHTML = 'Não pode votar'
+            }else if(ida < 18 || ida > 65){
+               p2.innerHTML = 'Voto não obrigatório'
+            }else {
+                p2.innerHTML = 'Voto obrigatório'
+            }
+        }
+    </script>
+</body>
+</html>
