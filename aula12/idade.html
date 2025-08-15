@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="styledosexo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <label for="iano">Ano de nascimento:</label>
+        <input type="number" name="Ano" id="iano" required><br>
+        <label>Sexo:</label>
+        <input type="radio" class="sexo" name="sexo" id="imasc">
+        <label for="imasc">Masculino</label>
+        <input type="radio" name="sexo" id="ifem" class="sexo">
+        <label for="ifem">Feminino</label><br>
+        <input type="submit" value="Verificar" onclick="verificar()">
+        <p id="text"></p>
+        <img src="" alt="foto" id="img">
+    </section>
+    <footer>
+        <p>&copy;Caike Tadeus</p>
+    </footer>
+    <script src="idade.js"></script>
+</body>
+</html>
