@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificar positivo</title>
+</head>
+<body>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero">
+    <button onclick="verificarPositivo()">Verificar</button>
+
+    <script>
+        function verificarPositivo() {
+            const numero = document.getElementById('numero').value;
+            if (numero > 0) {
+                alert('O número é positivo.');
+            } else if(numero < 0) {
+                alert('O número não é positivo.');
+            }else{
+                alert('O número é 0')
+            }
+        }
+    </script>
+</body>
+</html>

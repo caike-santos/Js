@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias de semana</title>
+   
+</head>
+<body>
+    <label for="num1">Digite um numero entre 1 e 7</label>
+    <input type="number" name="num" id="num1" min="1" max="7" required>
+    <button onclick="verificar()">Verificar</button>
+     <p id="res"></p>
+    <script>
+        function verificar(){
+            var resul = document.getElementById('num1')
+            resul = Number(resul.value)
+            var res = document.getElementById('res')
+            var resposta = ''
+            switch(resul){
+
+                case 1: resposta = `Domingo`
+                break
+                case 2: resposta = `Segunda`
+                break
+                case 3: resposta = `Terça`
+                break
+                case 4: resposta = `Quarta`
+                break
+                case 5: resposta = `Quinta`
+                break
+                case 6: resposta = `Sexta`
+                break
+                case 7: resposta = `Sabado`
+                break
+                default : resposta = `Numero invalido`
+            }
+            res.innerHTML = resposta
+        }
+    </script>
+</body>
+</html>

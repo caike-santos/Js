@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou impar</title>
+</head>
+<body>
+    <label for="num1">Digite um número</label>
+    <input type="number" name="num" id="num1" required>
+    <button onclick="verificar()">Verificar</button>
+    <script>
+        function verificar(){
+            const res = document.getElementById('num1').value
+            if(res%2==0){
+                alert('É par')
+            }else{
+                alert('É impar')
+            }
+        }
+    </script>
+</body>
+</html>
